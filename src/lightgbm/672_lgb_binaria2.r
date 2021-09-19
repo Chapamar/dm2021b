@@ -53,7 +53,7 @@ hs <- makeParamSet(
          makeNumericParam("prob_corte",       lower= 0.020, upper=    0.055)
         )
 
-campos_malos  <- c( "mpasivos_margen" )   #aqui se deben cargar todos los campos culpables del Data Drifting
+campos_malos  <- c( "mpasivos_margen", "mactivos_margen", "cplazo_fijo", "ccheques_emitidos", "ctransferencias_recibidas" )   #aqui se deben cargar todos los campos culpables del Data Drifting
 
 ksemilla_azar  <- 200000  #Aqui poner la propia semilla
 #------------------------------------------------------------------------------
