@@ -9,8 +9,8 @@ gc()
 require("data.table")
 
 #Establezco el Working Directory
-#setwd("~/buckets/b1/")
-setwd("C:/Users/Martin/Desktop/Carrera esp Datos_ITBA/Data Mining_E&F")
+setwd("~/buckets/b1/")
+#setwd("C:/Users/Martin/Desktop/Carrera esp Datos_ITBA/Data Mining_E&F")
 #cargo el dataset donde voy a entrenar
 dataset  <- fread("./datasetsOri/paquete_premium_202011.csv")
 
