@@ -12,7 +12,7 @@ require("data.table")
 
 #Establezco el Working Directory
 setwd( "~/buckets/b1/crudo" )
-
+setwd("C:/Users/Martin/Desktop/Carrera esp Datos_ITBA/Data Mining_E&F")
 
 EnriquecerDataset <- function( dataset , arch_destino )
 {
