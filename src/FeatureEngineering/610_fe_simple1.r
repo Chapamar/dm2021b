@@ -9,10 +9,10 @@ gc()
 require("data.table")
 
 #Establezco el Working Directory
-setwd("~/buckets/b1/")
-#setwd("C:/Users/Martin/Desktop/Carrera esp Datos_ITBA/Data Mining_E&F")
+#setwd("~/buckets/b1/")
+setwd("C:/Users/Martin/Desktop/Carrera esp Datos_ITBA/Data Mining_E&F")
 #cargo el dataset donde voy a entrenar
-#dataset  <- fread("./datasetsOri/paquete_premium_202011.csv")
+dataset  <- fread("./datasetsOri/paquete_premium_202011.csv")
 
 
 
@@ -22,13 +22,13 @@ EnriquecerDataset <- function( dataset , arch_destino )
 
   #INICIO de la seccion donde se deben hacer cambios con variables nuevas
   #discretizar y combinar las variables mas relevantes
-  dataset[ , mv_status            := ifelse (Master_status==0 |  Visa_status==0, 0 ,ifelse (Master_status!=0 |  Visa_status!=0, 1))]
-  dataset[ , cprod_cat            := ifelse (cproductos>=8 , 0 ,ifelse (cproductos <8 , 1))]
-  dataset[ , mcuentas_saldo_cat   := ifelse (mcuentas_saldo   >= 119486, 0 ,ifelse (cproductos < 119486, 1))]    
-  dataset[ , cliente_edad_cat     := ifelse (cliente_edad  >= 55, 0 ,ifelse (cliente_edad < 55, 1))]
-  dataset[ , mv_delinquency       := ifelse (Master_delinquency==0 |  Visa_delinquency==0, 1 , ifelse (Master_delinquency==1 |  Visa_delinquency==1, 0)) ]
-  dataset[ , mv_mlimitecompra     := ifelse (Master_mlimitecompra<=503734 |  Visa_mlimitecompra<=503734, 0 ,ifelse (Master_mlimitecompra>503734 |  Visa_mlimitecompra>503734,1))]
-  dataset[ , cliente_antiguedad_cat := ifelse (cliente_antiguedad  >= 185, 0 ,ifelse (cliente_antiguedad < 185, 1))]
+  dataset[ , mv_status            := ifelse (Master_status==0 |  Visa_status==0, 0 , 1)]
+  dataset[ , cprod_cat            := ifelse (cproductos>=8 , 0 , 1)]
+  dataset[ , mcuentas_saldo_cat   := ifelse (mcuentas_saldo   >= 119486, 0 , 1)]    
+  dataset[ , cliente_edad_cat     := ifelse (cliente_edad  >= 55, 0 , 1)]
+  dataset[ , mv_delinquency       := ifelse (Master_delinquency==0 |  Visa_delinquency==0, 1 , 0) ]
+  dataset[ , mv_mlimitecompra     := ifelse (Master_mlimitecompra<=503734 |  Visa_mlimitecompra<=503734, 0 ,1)]
+  dataset[ , cliente_antiguedad_cat := ifelse (cliente_antiguedad  >= 185, 0 , 1)]
  
    #combino MasterCard y Visa de manera loca
   dataset[ , mv_mfinanciacion_limite := rowSums( cbind( Master_mfinanciacion_limite,  Visa_mfinanciacion_limite) , na.rm=TRUE ) ]
