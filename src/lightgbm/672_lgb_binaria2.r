@@ -37,7 +37,7 @@ setwd( directory.root )
 
 
 
-kexperimento  <- E1002  #NA si se corre la primera vez, un valor concreto si es para continuar procesando
+kexperimento  <- 1002  #NA si se corre la primera vez, un valor concreto si es para continuar procesando
 
 kscript           <- "672_lgb_binaria2"
 karch_generacion  <- "./datasets/paquete_premium_202011_ext.csv"
