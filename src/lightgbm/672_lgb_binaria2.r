@@ -40,8 +40,8 @@ setwd( directory.root )
 kexperimento  <- NA   #NA si se corre la primera vez, un valor concreto si es para continuar procesando
 
 kscript           <- "672_lgb_binaria2"
-karch_generacion  <- "./datasetsOri/paquete_premium_202011.csv"
-karch_aplicacion  <- "./datasetsOri/paquete_premium_202101.csv"
+karch_generacion  <- "./datasetsOri/paquete_premium_202011_ext.csv"
+karch_aplicacion  <- "./datasetsOri/paquete_premium_202101_ext.csv"
 kBO_iter    <-  150   #cantidad de iteraciones de la Optimizacion Bayesiana
 
 #Aqui se cargan los hiperparametros
@@ -53,7 +53,7 @@ hs <- makeParamSet(
          makeNumericParam("prob_corte",       lower= 0.020, upper=    0.055)
         )
 
-campos_malos  <- c( "mpasivos_margen", "mactivos_margen", "cplazo_fijo", "ccheques_emitidos", "ctransferencias_recibidas" )   #aqui se deben cargar todos los campos culpables del Data Drifting
+campos_malos  <- c( "mpasivos_margen", "mactivos_margen" )   #aqui se deben cargar todos los campos culpables del Data Drifting
 
 ksemilla_azar  <- 200000  #Aqui poner la propia semilla
 #------------------------------------------------------------------------------
