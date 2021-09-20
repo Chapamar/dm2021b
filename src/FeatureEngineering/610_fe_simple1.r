@@ -22,7 +22,7 @@ EnriquecerDataset <- function( dataset , arch_destino )
 
   #INICIO de la seccion donde se deben hacer cambios con variables nuevas
   #discretizar y combinar las variables mas relevantes
-  dataset[ , mv_status            := ifelse (Master_status==0 |  Visa_status==0, 0 ,ifelse (Master_status!0 |  Visa_status!0, 1))]
+  dataset[ , mv_status            := ifelse (Master_status==0 |  Visa_status==0, 0 ,ifelse (Master_status!=0 |  Visa_status!=0, 1))]
   dataset[ , cprod_cat            := ifelse (cproductos>=8 , 0 ,ifelse (cproductos <8 , 1))]
   dataset[ , mcuentas_saldo_cat   := ifelse (mcuentas_saldo   >= 119486, 0 ,ifelse (cproductos < 119486, 1))]    
   dataset[ , cliente_edad_cat     := ifelse (cliente_edad  >= 55, 0 ,ifelse (cliente_edad < 55, 1))]
