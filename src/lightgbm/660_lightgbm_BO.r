@@ -30,11 +30,11 @@ karch_aplicacion  <- "./datasetsOri/paquete_premium_202101.csv"
 kBO_iter    <-  150   #cantidad de iteraciones de la Optimizacion Bayesiana
 
 hs <- makeParamSet( 
-         makeNumericParam("learning_rate",    lower= 0.01 , upper=    0.1),
+         makeNumericParam("learning_rate",    lower= 0.009 , upper=    0.1),
          makeNumericParam("feature_fraction", lower= 0.2  , upper=    1.0),
          makeIntegerParam("min_data_in_leaf", lower= 0    , upper= 8000),
-         makeIntegerParam("num_leaves",       lower=16L   , upper= 1024L),
-         makeNumericParam("prob_corte",       lower= 0.020, upper=    0.030)
+         makeIntegerParam("num_leaves",       lower=15L   , upper= 1024L),
+         makeNumericParam("prob_corte",       lower= 0.010, upper=    0.050)
         )
 
 ksemilla_azar  <- 102191  #Aqui poner la propia semilla
