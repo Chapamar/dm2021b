@@ -37,7 +37,7 @@ hs <- makeParamSet(
          makeNumericParam("prob_corte",       lower= 0.010, upper=    0.050)
         )
 
-ksemilla_azar  <- 102191  #Aqui poner la propia semilla
+ksemilla_azar  <- 200000  #Aqui poner la propia semilla
 #------------------------------------------------------------------------------
 #Funcion que lleva el registro de los experimentos
 
