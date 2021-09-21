@@ -33,8 +33,8 @@ hs <- makeParamSet(
          makeNumericParam("learning_rate",    lower= 0.009 , upper=    0.1),
          makeNumericParam("feature_fraction", lower= 0.2  , upper=    1.0),
          makeIntegerParam("min_data_in_leaf", lower= 0    , upper= 8000),
-         makeIntegerParam("num_leaves",       lower=15L   , upper= 1024L),
-         makeNumericParam("prob_corte",       lower= 0.010, upper=    0.050)
+         makeIntegerParam("num_leaves",       lower=17L   , upper= 1024L),
+         makeNumericParam("prob_corte",       lower= 0.010, upper=    0.030)
         )
 
 ksemilla_azar  <- 200000  #Aqui poner la propia semilla
