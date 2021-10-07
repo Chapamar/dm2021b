@@ -65,7 +65,7 @@ hs <- makeParamSet(
 
 campos_malos  <- c( )   #Intencionalmente VACIO
 
-ksemilla_azar  <- 102191  #Aqui poner la propia semilla
+ksemilla_azar  <- 200000  #Aqui poner la propia semilla
 #------------------------------------------------------------------------------
 #Funcion que lleva el registro de los experimentos
 
