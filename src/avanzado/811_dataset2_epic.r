@@ -22,7 +22,7 @@ setwd( directory.root )
 
 palancas  <- list()  #variable con las palancas para activar/desactivar
 
-palancas$version  <- "v002"   #Muy importante, ir cambiando la version
+palancas$version  <- "v003"   #Muy importante, ir cambiando la version
 
 palancas$variablesdrift  <- c("mpasivos_margen", "mactivos_margen")   #aqui van las columnas que se quieren eliminar
 
